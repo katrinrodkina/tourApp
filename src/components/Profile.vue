@@ -1,37 +1,6 @@
 <template>
  <v-container>
-     <v-layout row wrap>
-     <v-flex  xs12>
-
-  <div>
-    <h1>Contact page. Welcome baby!</h1>
-  </div>
-
-       <!-- <v-carousel style="cursor:pointer">
-           <v-carousel-item v-for="tour in tours" :src="tour.imageUrl" :key="tour.id"
-           @click="getTour(tour.id)"
-           >
-              <div class="title" > {{tour.title}}</div>
-           </v-carousel-item>
-       </v-carousel> -->
-     </v-flex>
-
-   </v-layout>
-
-   <v-layout row wrap >
-
-     <v-flex xs-12  sm6 class=" mt-2 text-xs-center   text-sm-right">
-       <v-btn    large router dark class="red darken-1 mr-5" to="/tours">
-         Explore
-       </v-btn>
-     </v-flex>
-       <v-flex  xs-12  sm6 class=" mt-2 text-xs-center text-sm-left">
-          <v-btn large router  dark class="red darken-1 ml-5"   to="/newtour">
-         New Tour
-       </v-btn>
-     </v-flex>
-   </v-layout>
-
+     <div>User Profile</div>
 
  
 

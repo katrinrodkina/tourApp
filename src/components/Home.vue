@@ -3,17 +3,13 @@
      <v-layout row wrap>
      <v-flex  xs12>
 
-  <div>
-    <h1>Contact page. Welcome baby!</h1>
-  </div>
-
-       <!-- <v-carousel style="cursor:pointer">
+       <v-carousel style="cursor:pointer">
            <v-carousel-item v-for="tour in tours" :src="tour.imageUrl" :key="tour.id"
-           @click="getTour(tour.id)"
+          
            >
               <div class="title" > {{tour.title}}</div>
            </v-carousel-item>
-       </v-carousel> -->
+       </v-carousel>
      </v-flex>
 
    </v-layout>
@@ -43,6 +39,7 @@
 <script>
 
   export default {
+  
       // data() {
       //   return {
       //     tours: [
@@ -51,16 +48,16 @@
       //     ]
       //   }
       // }
-//       computed: {
-//          tours () {
-//            return this.$store.getters.featuredTours
-//          }
-//       },
-//       methods: {
-//         getTour (id) {
-//           this.$router.push('/tours/'+id)
-//         }
-//       }
+      computed: {
+         tours () {
+           return this.$store.getters.featuredTours
+         }
+      },
+      methods: {
+        getTour (id) {
+          this.$router.push('/tours/'+id)
+        }
+       }
   }
 </script>
 

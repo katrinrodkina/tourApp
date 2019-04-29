@@ -1,25 +1,57 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Home from './components/Home'
+import SignIn from "./components/SignIn.vue";
+import SingUp from "./components/SignUp.vue";
+import Tours from "./components/Tours.vue";
+import NewTour from "./components/NewTour.vue";
+import Profile from "./components/Profile.vue";
+import Tour from "./components/Tour.vue";
+
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
-})
+      path: "/tours",
+      name: "tours",
+      component: Tours
+    },
+    {
+      path: "/tours/:id",
+      name: "tour",
+      props:true, 
+      component: Tour
+    },
+    {
+      path: "/newtour",
+      name: "newtour",
+      component: NewTour
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: Profile
+      
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: SignIn
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: SingUp
+    },
+   
+  ],
+  mode: "history"  //removes hash!
+});
